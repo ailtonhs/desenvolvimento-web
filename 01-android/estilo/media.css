@@ -41,8 +41,17 @@
         font-size: 1.1em;
     }
 
+    aside p {
+        font-size: 1em;
+    }
+
     .div-flex {
+        font-size: 0.9em;
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .extra {
+        font-size: 1.1em;
     }
 }
