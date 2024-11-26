@@ -81,7 +81,7 @@ section p {
 
 .fundo1 div {
     background-color: #111111be;
-    border-radius: 5px;
+    border-radius: 0 10px 10px 0;
 }
 
 
@@ -101,7 +101,7 @@ section p {
 .fundo2 div {
     color: #fff;
     background-color: #111111b6;
-    border-radius: 5px;
+    border-radius: 0 10px 10px 0;
 }
 
 footer {
@@ -117,4 +117,58 @@ footer a {
     font-variant: small-caps;
     font-style: italic;
     text-decoration: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    section div {
+        margin-left: 40px;
+        width: 350px;
+        
+    }
+
+    section p {
+        font-size: 1.5em;
+    }
+
+    .fundo1 div {
+        border-radius: 10px;
+    }
+
+    .fundo2 div {
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header h1 {
+        font-size: 3.4em;
+    }
+
+    section div {
+        margin-left: 80px;
+        width: 450px;
+        font-size: 1.5em;
+        
+    }
+
+
+    .fundo1 div {
+        border-radius: 10px;
+    }
+
+    .fundo2 div {
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
 }
