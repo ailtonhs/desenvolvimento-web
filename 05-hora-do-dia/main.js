@@ -1,4 +1,4 @@
-const horaAtual = 13 //new Date().getHours();
+const horaAtual = new Date().getHours();
 const minAtual = new Date().getMinutes();
 //let res = document.getElementById("res");
 
@@ -16,15 +16,17 @@ divImg.appendChild(img);
 
 if (horaAtual > 0 && horaAtual < 12) {
     img.setAttribute("src", "img/manha.jpg");
-    document.body.style.backgroundColor="#BED6E0"
+    document.body.style.backgroundColor="#BED6E0";
+    document.getElementById("saudacao").innerHTML = "Bom Dia!"
    
 } else if (horaAtual <= 18) {
     img.setAttribute("src", "img/tarde.jpg");
     document.body.style.backgroundColor="#B18958";
+    document.getElementById("saudacao").innerHTML = "Boa Tarde!"
 } else {
     img.setAttribute("src", "img/noite.jpg")
     document.body.style.backgroundColor="#3184C1";
-    document.getElementById("saudacao").innerHTML = "Bom Noite!"
+    document.getElementById("saudacao").innerHTML = "Bom Noite!";
 }
 
 
