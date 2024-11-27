@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de Idade</title>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <h1>Verificador de Idade</h1>
+        </div>
+        <div class="conteiner">
+            <div class="linha">
+                <div class="left-25">
+                    <label for="iano">Digite o ano de nascimento</label>
+                </div>
+                <div class="left-75">
+                    <input type="number" id="iano" name="ano" placeholder="ex:1992">
+                </div>
+            </div>
+
+            <div>
+                <div class="fieldset">
+                    <fieldset>
+                        <legend>Selecione seu sexo</legend>
+                        <label for="mas">Masculino
+                            <input type="radio" name="radsex" id="mas" checked>
+                        </label>
+
+                        <label for="fem">Feminino
+                            <input type="radio" name="radsex" id="fem">
+                        </label>
+                    </fieldset>
+                </div>
+                <div id="divImg">
+                    
+                </div>
+
+                <div>
+                    <p id="res" style="text-align: center;"></p>
+                </div>
+            </div>
+
+            <div class="verificar">
+                <button type="button">Verificar</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Criado por <a href="#">Ailton Henrique</a></p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
