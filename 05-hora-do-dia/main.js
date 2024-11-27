@@ -1,33 +1,52 @@
-const horaAtual = new Date().getHours();
-const minAtual = new Date().getMinutes();
-//let res = document.getElementById("res");
+
 
 function resultado(mensagem) {
     document.getElementById("res").innerHTML = mensagem;
 };
 
-resultado(`Agora são exatamente ${horaAtual} horas e ${minAtual} minutos`);
+function atualizarRelogio() {
+    const horaAtual = new Date().getHours().toString().padStart(2, '0');
+    const minAtual = new Date().getMinutes().toString().padStart(2, '0');
+    const segundos = new Date().getSeconds().toString().padStart(2, '0');
 
-const divImg = document.getElementById("img");
-let img = document.createElement("img");
+    //formata a hora
+    const horaFormatada = `${horaAtual}:${minAtual}:${segundos}`;
 
-divImg.appendChild(img);
-//img.setAttribute("src", "img/manha.jpg");
 
-if (horaAtual > 0 && horaAtual < 12) {
-    img.setAttribute("src", "img/manha.jpg");
-    document.body.style.backgroundColor="#BED6E0";
-    document.getElementById("saudacao").innerHTML = "Bom Dia!"
-   
-} else if (horaAtual <= 18) {
-    img.setAttribute("src", "img/tarde.jpg");
-    document.body.style.backgroundColor="#B18958";
-    document.getElementById("saudacao").innerHTML = "Boa Tarde!"
-} else {
-    img.setAttribute("src", "img/noite.jpg")
-    document.body.style.backgroundColor="#3184C1";
-    document.getElementById("saudacao").innerHTML = "Bom Noite!";
+    resultado(`<h3>Agora são exatamente <strong style="color: red">${horaFormatada}</strong></h3>`);
 }
+
+setInterval(atualizarRelogio, 1000);
+
+function AtualizarImagem() {
+    const divImg = document.getElementById("img");
+    const img = document.createElement("img");
+    divImg.appendChild(img);
+
+    const horaAtual = new Date().getHours();
+
+    if (horaAtual > 0 && horaAtual <= 12) {
+        img.src = "img/manha.jpg";
+        document.body.style.backgroundColor = "#CDD3D2";
+        document.getElementById("saudacao").innerHTML = "Bom Dia!";
+
+
+    } else if (horaAtual <= 18) {
+        img.setAttribute("src", "img/tarde.jpg");
+        document.body.style.backgroundColor = "#C28741";
+        document.getElementById("saudacao").innerHTML = "Boa Tarde!";
+
+    } else {
+        img.src = "img/noite.jpg";
+        document.body.style.backgroundColor = "#0B4167"
+        document.getElementById("saudacao").innerHTML = "Boa Noite!";
+    };
+}
+//chama a função atualiza imagem
+AtualizarImagem();
+
+
+
 
 
 

@@ -14,7 +14,7 @@ body {
 header {
     color: #fff;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 1em;
     font-variant: small-caps;
 }
@@ -78,4 +78,20 @@ footer a {
     color: #fff;
     font-variant: small-caps;
     font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    .conteiner {
+        max-width: 800px;
+    }
+    .conteiner img {
+        width: 350px;
+    }
+
+    footer {
+        font-size: 1em;
+    }
 }
